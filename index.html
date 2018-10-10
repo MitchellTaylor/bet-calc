@@ -9,6 +9,171 @@
     <script src="maths.js"></script>
 </head>
 <body>
-    
+    <form name="bettingcalculator">
+        <div class="divider">
+            <label for="stake">Input Stake:</label>
+            <input class="bets" id="stake" type="text" name="stake" size="10" maxlength="10">
+        </div>
+        <table class="betTypes">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="single">Single: </label>
+                        <input id="single" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Single">
+                    </td>
+                    <td>
+                        <label for="double">Double: </label>
+                        <input id="double" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Double">
+                    </td>
+                    <td>
+                        <label for="treble">Treble: </label>
+                        <input id="treble" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Treble">
+                    </td>
+                    <td>
+                        <label for="accumulator">Accumulator (4+): </label>
+                        <input id="accumulator" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Accumulator">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="trixie">Trixie: </label>
+                        <input id="trixie" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Trixie">
+                    </td>
+                    <td>
+                        <label for="patent">Patent: </label>
+                        <input id="patent" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Patent">
+                    </td>
+                    <td>
+                        <label for="yankee">Yankee: </label>
+                        <input id="yankee" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Yankee">
+                    </td>
+                    <td>
+                        <label for="canadian">Canadian: </label>
+                        <input id="canadian" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Canadian">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lucky15">Lucky 15: </label>
+                        <input id="lucky15" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Lucky15">
+                    </td>
+                    <td>
+                        <label for="lucky31">Lucky 31: </label>
+                        <input id="luck31" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Lucky31">
+                    </td>
+                    <td>
+                        <label for="lucky63">Lucky 63: </label>
+                        <input id="luck63" class="radio" name="bet_type" onClick="fullName(this.form);" type="radio" value="Lucky63">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="bets">
+            <thead>
+                <tr>
+                    <th>Selection</th>
+                    <th class="odds" colspan="3">
+                        <label for="fraction">Odds</label>
+                    </th>                    
+                    <th class="winner">Winner?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="selectiontext">Bet 1</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet1fraction1" size="5" maxlength="5">
+                    </td>
+                    <td class="">/</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet1fraction2" size="5" maxlength="5">
+                    </td>                    
+                    <td>
+                        <input class="checkbox" type="checkbox" name="winner1" value="winner1">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectiontext">Bet 2</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet2fraction1" size="5" maxlength="5">
+                    </td>
+                    <td class="">/</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet2fraction2" size="5" maxlength="5">
+                    </td>
+                    <td>
+                        <input class="checkbox" type="checkbox" name="winner2" value="winner2">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectiontext">Bet 3</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet3fraction1" size="5" maxlength="5">
+                    </td>
+                    <td class="">/</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet3fraction2" size="5" maxlength="5">
+                    </td>
+                    <td>
+                        <input class="checkbox" type="checkbox" name="winner3" value="winner3">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectiontext">Bet 4</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet4fraction1" size="5" maxlength="5">
+                    </td>
+                    <td class="">/</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet4fraction2" size="5" maxlength="5">
+                    </td>
+                    <td>
+                        <input class="checkbox" type="checkbox" name="winner4" value="winner4">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectiontext">Bet 5</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet5fraction1" size="5" maxlength="5">
+                    </td>
+                    <td class="">/</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet5fraction2" size="5" maxlength="5">
+                    </td>
+                    <td>
+                        <input class="checkbox" type="checkbox" name="winner5" value="winner5">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectiontext">Bet 6</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet6fraction1" size="5" maxlength="5">
+                    </td>
+                    <td class="">/</td>
+                    <td class="">
+                        <input class="bets" type="text" name="bet6fraction2" size="5" maxlength="5">
+                    </td>
+                    <td>
+                        <input class="checkbox" type="checkbox" name="winner6" value="winner6">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tr class="summary">
+                <td class="summarytitles">Stake(s):</td>
+                <td>
+                    <input class="totals" type="text" name="stake" size="12" maxlength="12" readonly="true">
+                </td>
+                <td class="summarytitles">Returns:</td>
+                <td>
+                    <input class="totals" type="text" name="winnings" size="12" maxlength="12" readonly="true">
+                </td>
+                <td class="summarytitles">Profit:</td>
+                <td>
+                    <input class="totalProfit" type="text" name="profit" maxlength="12" readonly="true">
+                </td>
+            </tr>
+        </table>
 </body>
 </html>
